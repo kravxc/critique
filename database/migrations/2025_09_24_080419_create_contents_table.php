@@ -13,8 +13,6 @@ return new class extends Migration {
         Schema::create('contents', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->text('description');
-            $table->text('content_text')->nullable();
             $table->enum('music_type', ['single', 'album', 'ep'])->nullable();
             $table->string('artist')->nullable(); // исполнитель (для музыки)
             $table->string('genre'); // жанр

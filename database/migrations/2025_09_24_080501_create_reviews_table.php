@@ -13,12 +13,11 @@ return new class extends Migration {
         Schema::create('reviews', function (Blueprint $table) {
             $table->id();
             $table->foreignId('content_id')->constrained()->onDelete('cascade');
-            $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->foreignId('user_id')->constrained()->onDelete(action: 'cascade');
             $table->string('title')->nullable();
             $table->text('text');
-            $table->enum('review_type', ['full', 'mini'])->default('full');
-            $table->unsignedInteger('likes_count')->default(0); // общее количество лайков
-            $table->unsignedInteger('author_likes_count')->default(0); // количество авторских лайков
+            $table->unsignedInteger('likes_count')->default(0);
+            $table->unsignedInteger('author_likes_count')->default(0);
             $table->timestamps();
             $table->softDeletes();
             $table->index(['content_id']);

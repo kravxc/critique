@@ -14,8 +14,6 @@ class Content extends Model
 
     protected $fillable = [
         'title',
-        'description',
-        'content_text',
         'music_type',
         'artist',
         'genre',
@@ -24,7 +22,6 @@ class Content extends Model
         'label',
         'favorites_count',
         'reviews_count',
-        'average_rating',
         'added_by',
     ];
 
