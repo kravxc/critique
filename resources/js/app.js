@@ -1,4 +1,3 @@
-// app.js - альтернативная версия
 import "./bootstrap";
 import "@fortawesome/fontawesome-free/css/all.css";
 import {
@@ -18,6 +17,7 @@ import {
     ShieldCheck,
     PenTool,
     Heart,
+    UserPlus,
 } from "lucide";
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -38,6 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
             ShieldCheck,
             PenTool,
             Heart,
+            UserPlus,
         },
     });
 });

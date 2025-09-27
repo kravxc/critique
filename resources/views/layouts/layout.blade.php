@@ -7,7 +7,7 @@
 </head>
 <body>
      <header>
-      <a href="#" class="logo">
+      <a href="{{ route('home') }}" class="logo">
         <i class="fas fa-feather-alt"></i>
         CritiqueHub
       </a>
@@ -20,7 +20,10 @@
             <a href="#"><i data-lucide="message-square"></i> Обзоры</a>
           </li>
           <li>
-            <a href="#"><i data-lucide="log-in"></i> Войти</a>
+            <a href="{{ route('auth') }}"><i data-lucide="log-in"></i> Войти</a>
+          </li>
+          <li>
+            <a href="{{ route('register') }}"><i data-lucide="user-plus"></i> Регистрация</a>
           </li>
         </ul>
       </nav>

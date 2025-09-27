@@ -8,6 +8,7 @@ Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->na
 
 
 Route::get('/login', [AuthController::class, 'showAuthForm'])->name('auth');
+Route::post('/login', [AuthController::class, 'authenticate'])->name('auth.submit');
 
 Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->name('register');
 Route::post('/register', [RegisterController::class, 'register'])->name('register.submit');
