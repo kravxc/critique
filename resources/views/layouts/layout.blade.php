@@ -19,12 +19,24 @@
           <li>
             <a href="#"><i data-lucide="message-square"></i> Обзоры</a>
           </li>
+          @auth
+           <li>
+            <a href="{{ route('home') }}"><i data-lucide="user"></i>{{ auth()->user()->name }}</a>
+          </li>
+          <form action="{{ route('logout') }}" method="post">
+            @csrf
+           <li>
+            <button type="submit"><i data-lucide="log-out"></i>Выйти</button>
+          </li>
+          </form>
+          @else
           <li>
             <a href="{{ route('auth') }}"><i data-lucide="log-in"></i> Войти</a>
           </li>
           <li>
             <a href="{{ route('register') }}"><i data-lucide="user-plus"></i> Регистрация</a>
           </li>
+           @endauth
         </ul>
       </nav>
     </header>

@@ -35,7 +35,8 @@ nav ul {
     gap: 1.5rem;
 }
 
-nav a {
+nav a,
+nav button {
     color: var(--text);
     text-decoration: none;
     font-weight: 500;
@@ -46,17 +47,30 @@ nav a {
     display: flex;
     align-items: center;
     gap: 6px;
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
-nav a:hover {
+nav a:hover,
+nav button:hover {
     color: white;
     background: var(--glass);
 }
 
-/* Lucide иконки в навигации и формах */
 nav a i,
+nav button i,
 .form-label i,
 .toggle-password i {
     width: 16px;
     height: 16px;
+}
+
+nav form {
+    margin: 0;
+    padding: 0;
+}
+
+nav form li {
+    list-style: none;
 }

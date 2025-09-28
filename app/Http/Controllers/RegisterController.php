@@ -42,7 +42,6 @@ class RegisterController extends Controller
                 ->withInput();
         }
 
-        // Создание пользователя
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,

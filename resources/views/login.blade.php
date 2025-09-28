@@ -74,7 +74,7 @@
             @enderror
         </div>
       
-        <button type="submit" class="btn-register">Создать аккаунт</button>
+        <button type="submit" class="btn-register">Войти</button>
 
         <div class="login-prompt">
             Еще не с нами? <a href="{{ route('register') }}" class="login-link">Зарегистрироваться здесь</a>
