@@ -24,7 +24,6 @@ function togglePassword() {
         toggleIcon.setAttribute("data-lucide", "eye");
     }
 
-    // Перерисовываем иконку
     const oldSvg = toggleIcon.querySelector("svg");
     if (oldSvg) {
         oldSvg.remove();
@@ -38,7 +37,6 @@ function togglePassword() {
     });
 }
 
-// Прогресс-бар
 function updateProgress() {
     const inputs = [
         document.getElementById("name"),
@@ -74,13 +72,11 @@ function updateProgress() {
 }
 
 function initializeVisualEffects() {
-    // Показать/скрыть пароль
     const togglePasswordBtn = document.querySelector(".toggle-password");
     if (togglePasswordBtn) {
         togglePasswordBtn.addEventListener("click", togglePassword);
     }
 
-    // Анимация прогресс-бара
     const inputs = [
         document.getElementById("name"),
         document.getElementById("email"),
@@ -92,7 +88,7 @@ function initializeVisualEffects() {
     if (inputs.every((input) => input !== null)) {
         inputs.forEach((input) => {
             input.addEventListener("input", updateProgress);
-            // Анимация при фокусе
+
             input.addEventListener("focus", function () {
                 this.style.transform = "scale(1.02)";
                 this.style.transition = "transform 0.2s ease";

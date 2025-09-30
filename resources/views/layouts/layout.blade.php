@@ -17,7 +17,7 @@
             <a href="{{ route('home') }}"><i data-lucide="house"></i> Главная</a>
           </li>
           <li>
-            <a href="#"><i data-lucide="message-square"></i> Обзоры</a>
+            <a href="{{ route('reviews') }}"><i data-lucide="message-square"></i> Обзоры</a>
           </li>
           @auth
            <li>

@@ -13,7 +13,7 @@
         <div class="progress-fill" id="progressFill"></div>
     </div>
 
-    @if($errors->any())
+    {{-- @if($errors->any())
         <div class="alert alert-danger">
             <ul class="mb-0">
                 @foreach($errors->all() as $error)
@@ -21,7 +21,7 @@
                 @endforeach
             </ul>
         </div>
-    @endif
+    @endif --}}
 
 
     @if(session('success'))
@@ -45,7 +45,7 @@
                 class="form-control @error('name') is-invalid @enderror"
                 placeholder="Как тебя зовут?"
                 value="{{ old('name') }}"
-                required
+             
             />
             @error('name')
                 <span class="text-danger">{{ $message }}</span>
@@ -64,7 +64,7 @@
                 class="form-control @error('email') is-invalid @enderror"
                 placeholder="example@mail.com"
                 value="{{ old('email') }}"
-                required
+
             />
             @error('email')
                 <span class="text-danger">{{ $message }}</span>
@@ -83,7 +83,7 @@
                     name="password"
                     class="form-control @error('password') is-invalid @enderror"
                     placeholder="Придумай надёжный пароль"
-                    required
+
                 />
                 <span class="toggle-password">
                     <i id="toggleIcon" data-lucide="eye"></i>
@@ -105,7 +105,7 @@
                 name="password_confirmation"
                 class="form-control"
                 placeholder="Повтори пароль"
-                required
+
             />
         </div>
 
